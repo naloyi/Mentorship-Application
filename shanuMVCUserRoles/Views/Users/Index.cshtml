@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+@if (ViewBag.displayMenu == "Yes1")
+{
+    Layout = null;
+    Layout = "~/views/shared/administrator.cshtml";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+    <h1>Welcome Administrator. Now you can create user Role.</h1>
+   
+    <h3>
+        <li>@Html.ActionLink("Manage Role", "Index", "Role")</li>
+    </h3>
+    <h2>  Welcome <strong>@ViewBag.Name</strong> :)</h2>
+}
+
+@if (ViewBag.displayMenu =="Yes2")
+{
+    <h1>Welcome Mentee. Your menu is coming very soon. </h1>
+    <h2>  Welcome <strong>@ViewBag.Name</strong> :)</h2>
+}
+
+@if (ViewBag.displayMenu == "Yes3")
+{
+    <h1>Welcome Mentor. Your menu is coming very soon.  </h1>
+    <h2>  Welcome <strong>@ViewBag.Name</strong> :)</h2>
+}
+
+
